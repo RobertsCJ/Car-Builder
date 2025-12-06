@@ -14,13 +14,16 @@ public class Cliente{
 	  carBuild.buildTipo(tipo);
 	  carBuild.buildCor(cor);
 	  carBuild.buildAno(1990);
-	  Carro car = carBuild.build();
+	  Carro car = carBuild.make();
 	  */
-	  Director dir = new Director(new CarBuilder());
-	  Carro car = dir.buildBMW(101);
-	  
-	  
-	  
+	  Carro car;
+	  CarBuilder builder = new CarBuilder();
+	  Director dir = new Director(builder);
+	  car = dir.buildBMW(101);
+	  car.info();
+	  car = dir.buildFord(102);
+	  car.info();
+	  car = dir.buildSUV(103);
 	  car.info();
 	}
 

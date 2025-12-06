@@ -7,8 +7,13 @@ public class CarBuilder{
   int ano;
   
   public void reset(){
-    //
-  } 
+    id = 0;
+    marca = null;
+    modelo = null;
+    tipo = null;
+    cor = null;
+    ano = 0;
+  }
   
   public void buildId(int id){
     this.id = id;

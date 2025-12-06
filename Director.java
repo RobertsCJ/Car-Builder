@@ -7,11 +7,13 @@ public class Director{
   }
   
   public Carro buildSUV(int id){
+    builder.reset();
     builder.buildId(id);
     builder.buildTipo("SUV");
     return builder.make();
   }
   public Carro buildBMW(int id){
+    builder.reset();
     builder.buildId(id);
     builder.buildMarca("BMW");
     builder.buildModelo("Z3");
@@ -22,6 +24,7 @@ public class Director{
   }
   
   public Carro buildFord(int id){
+     builder.reset();
      builder.buildId(id);
      builder.buildMarca("Ford");
      builder.buildModelo("KA");
