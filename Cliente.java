@@ -1,7 +1,6 @@
 public class Cliente{
 	public static void main(String[] args){
 	  //Carro car = new Carro(new Bateria(), new Motor(), new Tanque(), new Farol()); fica com muitos parametros
-	  int id = 101;
 	  /*
 	  String cor = "Vermelho";
 	  String marca = "BMW";
@@ -16,14 +15,15 @@ public class Cliente{
 	  carBuild.buildAno(1990);
 	  Carro car = carBuild.make();
 	  */
+	  int id = 1;
 	  Carro car;
 	  CarBuilder builder = new CarBuilder();
 	  Director dir = new Director(builder);
-	  car = dir.buildBMW(101);
+	  car = dir.buildBMW(id++);
 	  car.info();
-	  car = dir.buildFord(102);
+	  car = dir.buildFord(id++);
 	  car.info();
-	  car = dir.buildSUV(103);
+	  car = dir.buildSUV(id++);
 	  car.info();
 	}
 

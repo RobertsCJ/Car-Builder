@@ -14,7 +14,7 @@ public class Carro{
     this.cor = cor;
   }
   public void info(){
-    System.out.printf("%s ID %d \n%s %s %d %s\n", tipo, id, marca, modelo, ano, cor);
+    System.out.printf("%s ID %d \n%s %s %d %s\n\n", tipo, id, marca, modelo, ano, cor);
   }
   
   
