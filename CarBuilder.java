@@ -6,6 +6,9 @@ public class CarBuilder{
   String cor;
   int ano;
   
+  public void reset(){
+    //
+  } 
   
   public void buildId(int id){
     this.id = id;
@@ -26,7 +29,7 @@ public class CarBuilder{
   public void buildAno(int ano){
     this.ano = ano;
   }
-  public Carro build(){
+  public Carro make(){
     return new Carro(id, marca, modelo, tipo, cor, ano);
   }
 
