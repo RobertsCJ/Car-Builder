@@ -26,5 +26,5 @@ public class Cliente{
 	  car = dir.buildGenericSUV(id++);
 	  car.info();
 	}
-
+'
 }
