@@ -6,7 +6,7 @@ public class Director{
     this.builder = builder;
   }
   
-  public Carro buildSUV(int id){
+  public Carro buildGenericSUV(int id){
     builder.reset();
     builder.buildId(id);
     builder.buildTipo("SUV");
@@ -21,7 +21,13 @@ public class Director{
     builder.buildCor("Vermelho");
     builder.buildTipo("Sportcar");
     return builder.make();
-  }
+  } 
+  public Carro buildFord(int id){
+     builder.reset();
+     builder.buildId(id);
+     builder.buildMarca("Ford");
+     builder.buildModelo("KA");
+     builder.buildAno(2018);
   
   public Carro buildFord(int id){
      builder.reset();
@@ -32,6 +38,43 @@ public class Director{
      builder.buildTipo("Sedan");
      builder.buildCor("Preto");
      return builder.make();
+  }
+  
+  public Carro buildDetailedToyota(int id){
+    builder.reset();
+    builder.buildId(id);
+     builder.buildMarca("Toyota");
+     builder.buildModelo("Supra");
+     builder.buildAno(1997);
+     builder.buildTipo("Coupé");
+     builder.buildCor("Laranja");
+     builder.buildFarol("Xenon");
+     builder.buildTanque(60);
+     builder.buildMotor(360, builder.tanque);
+     builder.buildBateria(40000);
+     builder.buildIgnicao(builder.bateria);
+     builder.makeDetailed;
+  }
+  
+  public Carro buildYourOwnCar(int id, String marca, String modelo, int ano, String tipo, String cor){
+    builder.reset();
+    builder.buildId(id);
+     builder.buildMarca(marca);
+     builder.buildModelo(modelo);
+     builder.buildAno(ano);
+     builder.buildTipo(tipo);
+     builder.buildCor(cor);
+     builder.make();
+  }
+  
+  public Carro buildYourOwnCarDetailed(int id, String marca, String modelo, int   ano, String tipo, String cor, Motor motor, Ignicao ign, Farol far){
+    builder.reset();
+    builder.buildId(id);
+     builder.buildMarca(marca);
+     builder.buildModelo(modelo);
+     builder.buildAno(ano);
+     builder.buildTipo(tipo);
+     builder.buildCor(cor);
   }
   
   

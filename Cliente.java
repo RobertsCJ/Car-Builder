@@ -23,7 +23,7 @@ public class Cliente{
 	  car.info();
 	  car = dir.buildFord(id++);
 	  car.info();
-	  car = dir.buildSUV(id++);
+	  car = dir.buildGenericSUV(id++);
 	  car.info();
 	}
 

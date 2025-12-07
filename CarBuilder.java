@@ -6,6 +6,12 @@ public class CarBuilder{
   String cor;
   int ano;
   
+  Motor motor;
+  Farol farol;
+  Ignicao ignicao;
+  Bateria bateria;
+  Tanque tanque;
+  
   public void reset(){
     id = 0;
     marca = null;
@@ -22,7 +28,9 @@ public class CarBuilder{
     this.marca = marca;
   }
   public void buildModelo(String modelo){
-    this.modelo = modelo;
+    this.modelo = modelo;public Carro make(){
+    return new Carro(id, marca, modelo, tipo, cor, ano);
+  }
   }
   public void buildTipo(String tipo){
     this.tipo = tipo;
@@ -34,8 +42,33 @@ public class CarBuilder{
   public void buildAno(int ano){
     this.ano = ano;
   }
+  
+  
+  public void buildMotor(int cv, Tanque tq){
+    motor = new Motor(tq, cv);
+  }
+  
+  public void buildTanque(int qtd){
+    tanque = new Tanque(qtd);
+  }
+  
+  public void buildFarol(String tp){
+    farol = new Farol(tp);
+  }
+  
+  public void buildIgnicao(Bateria bat){
+    ignicao = new Ignicao(bat);
+  }
+  
+  public void buildBateria(int wt){
+    bateria = new Bateria(wt);
+  }
+  
   public Carro make(){
     return new Carro(id, marca, modelo, tipo, cor, ano);
+  }
+  public Carro makeDetailed(){
+    return new Carro(id, marca, modelo, tipo, cor, ano, motor, ignicao, farol);
   }
 
 }
