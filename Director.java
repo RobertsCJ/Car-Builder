@@ -28,13 +28,6 @@ public class Director{
      builder.buildMarca("Ford");
      builder.buildModelo("KA");
      builder.buildAno(2018);
-  
-  public Carro buildFord(int id){
-     builder.reset();
-     builder.buildId(id);
-     builder.buildMarca("Ford");
-     builder.buildModelo("KA");
-     builder.buildAno(2018);
      builder.buildTipo("Sedan");
      builder.buildCor("Preto");
      return builder.make();
@@ -46,13 +39,13 @@ public class Director{
      builder.buildMarca("Toyota");
      builder.buildModelo("Supra");
      builder.buildAno(1997);
-     builder.buildTipo("Coupé");
+     builder.buildTipo("Coupe");
      builder.buildCor("Laranja");
      builder.buildFarol("Xenon");
      builder.buildTanque(60);
      builder.buildMotor(360, builder.tanque);
      builder.buildBateria(40000);
-     builder.makeDetailed;
+     return builder.makeDetailed();
   }
   
   public Carro buildYourOwnCar(int id, String marca, String modelo, int ano, String tipo, String cor){
@@ -63,10 +56,10 @@ public class Director{
      builder.buildAno(ano);
      builder.buildTipo(tipo);
      builder.buildCor(cor);
-     builder.make();
+     return builder.make();
   }
   
-  public Carro buildYourOwnCarDetailed(int id, String marca, String modelo, int   ano, String tipo, String cor, Motor motor, Farol far){
+  public Carro buildYourOwnCarDetailed(int id, String marca, String modelo, int   ano, String tipo, String cor, int cv, int watts, String tipoFarol){
     builder.reset();
     builder.buildId(id);
      builder.buildMarca(marca);
@@ -74,6 +67,11 @@ public class Director{
      builder.buildAno(ano);
      builder.buildTipo(tipo);
      builder.buildCor(cor);
+     builder.buildTanque(60);
+     builder.buildMotor(cv, builder.tanque);
+     builder.buildBateria(watts);
+     builder.buildFarol(tipoFarol);
+     return builder.makeDetailed();
   }
   
   

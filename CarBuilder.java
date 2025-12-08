@@ -27,10 +27,12 @@ public class CarBuilder{
     this.marca = marca;
   }
   public void buildModelo(String modelo){
-    this.modelo = modelo;public Carro make(){
+    this.modelo = modelo;
+   } 
+    public Carro make(){
     return new Carro(id, marca, modelo, tipo, cor, ano);
   }
-  }
+  
   public void buildTipo(String tipo){
     this.tipo = tipo;
   }
@@ -60,11 +62,8 @@ public class CarBuilder{
     bateria = new Bateria(wt);
   }
   
-  public Carro make(){
-    return new Carro(id, marca, modelo, tipo, cor, ano);
-  }
   public Carro makeDetailed(){
-    return new Carro(id, marca, modelo, tipo, cor, ano, motor, farol);
+    return new Carro(id, marca, modelo, tipo, cor, ano, motor, bateria, farol);
   }
 
 }

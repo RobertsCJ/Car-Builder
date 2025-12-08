@@ -6,9 +6,9 @@ public class Carro{
   private String cor;
   private int ano;
   
-  private Motor motor;
-  private Bateria bateria;
-  private Farol farol;
+  public Motor motor;
+  public Bateria bateria;
+  public Farol farol;
   
   public Carro(int id, String marca, String modelo, String tipo, String cor, int ano){
     this.id = id;
@@ -22,16 +22,25 @@ public class Carro{
   public Carro(int id, String marca, String modelo, String tipo, String cor, int ano, Motor mot, Bateria bateria, Farol far){
     this(id, marca, modelo, tipo, cor, ano);
     this.motor = mot;
+    this.bateria = bateria;
     this.farol = far;
   }
   public void info(){
     System.out.printf("%s ID %d \n%s %s %d %s\n\n", tipo, id, marca, modelo, ano, cor);
   }
   
+  public void showState(){
+    System.out.printf("Motor: %b \nBateria: %b \nFarol: %b\n\n", motor.isLigado, bateria.isLigado, farol.isLigado);
+  }
+  
   public void ligar(){
     this.bateria.on();
     this.motor.on();
+  }
   
+  public void desligar(){
+    bateria.off();
+    motor.off();
   }
   
   

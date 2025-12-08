@@ -15,6 +15,28 @@ public class Cliente{
     
     CarBuilder builder = new CarBuilder();
     Director fabrica = new Director(builder);
+    Carro toyo = fabrica.buildDetailedToyota(id++);
+    toyo.info();
+    //toyo.showState();
+    //System.out.println(toyo.bateria.isLigado);
+    //System.out.println(toyo.motor.isLigado);
     
+    
+    ControleRemoto remoto = new ControleRemoto();
+    Command ligarCarro = new LigarCarroCommand(toyo);
+    Command desligarCarro = new DesligarCarroCommand(toyo);
+    Command ligarFarol = new FarolOnCommand(toyo.farol);
+    Command desligarFarol = new FarolOffCommand(toyo.farol);
+    
+    remoto.setComando(ligarCarro);
+    remoto.comandar();
+    toyo.showState();
+    
+    remoto.setComando(desligarCarro);
+    remoto.comandar();
+    remoto.setComando(ligarFarol);
+    remoto.comandar();
+    toyo.showState();
+     
 	}
 }

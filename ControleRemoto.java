@@ -4,7 +4,7 @@ class ControleRemoto{
 	public void setComando(Command tipoComando){
 	  this.tipoComando = tipoComando;
 	}
-	public void comando(){
+	public void comandar(){
 		tipoComando.execute();
 	}
 	
