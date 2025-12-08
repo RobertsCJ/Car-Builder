@@ -1,4 +1,4 @@
-class ControleRemoto(){
+class ControleRemoto{
 	Command tipoComando;
 	
 	public void setComando(Command tipoComando){
@@ -8,7 +8,4 @@ class ControleRemoto(){
 		tipoComando.execute();
 	}
 	
-	
-	
-
 }

@@ -8,7 +8,6 @@ public class CarBuilder{
   
   Motor motor;
   Farol farol;
-  Ignicao ignicao;
   Bateria bateria;
   Tanque tanque;
   
@@ -56,9 +55,6 @@ public class CarBuilder{
     farol = new Farol(tp);
   }
   
-  public void buildIgnicao(Bateria bat){
-    ignicao = new Ignicao(bat);
-  }
   
   public void buildBateria(int wt){
     bateria = new Bateria(wt);
@@ -68,7 +64,7 @@ public class CarBuilder{
     return new Carro(id, marca, modelo, tipo, cor, ano);
   }
   public Carro makeDetailed(){
-    return new Carro(id, marca, modelo, tipo, cor, ano, motor, ignicao, farol);
+    return new Carro(id, marca, modelo, tipo, cor, ano, motor, farol);
   }
 
 }

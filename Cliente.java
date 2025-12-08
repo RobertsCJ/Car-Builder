@@ -10,21 +10,11 @@ public class Cliente{
 	  carBuild.buildId(id);
 	  carBuild.buildMarca(marca);
 	  carBuild.buildModelo(modelo);
-	  carBuild.buildTipo(tipo);
-	  carBuild.buildCor(cor);
-	  carBuild.buildAno(1990);
-	  Carro car = carBuild.make();
-	  */
-	  int id = 1;
-	  Carro car;
-	  CarBuilder builder = new CarBuilder();
-	  Director dir = new Director(builder);
-	  car = dir.buildBMW(id++);
-	  car.info();
-	  car = dir.buildFord(id++);
-	  car.info();
-	  car = dir.buildGenericSUV(id++);
-	  car.info();
+  */
+    int id = 1;
+    
+    CarBuilder builder = new CarBuilder();
+    Director fabrica = new Director(builder);
+    
 	}
-'
 }

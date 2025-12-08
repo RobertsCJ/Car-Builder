@@ -52,7 +52,6 @@ public class Director{
      builder.buildTanque(60);
      builder.buildMotor(360, builder.tanque);
      builder.buildBateria(40000);
-     builder.buildIgnicao(builder.bateria);
      builder.makeDetailed;
   }
   
@@ -67,7 +66,7 @@ public class Director{
      builder.make();
   }
   
-  public Carro buildYourOwnCarDetailed(int id, String marca, String modelo, int   ano, String tipo, String cor, Motor motor, Ignicao ign, Farol far){
+  public Carro buildYourOwnCarDetailed(int id, String marca, String modelo, int   ano, String tipo, String cor, Motor motor, Farol far){
     builder.reset();
     builder.buildId(id);
      builder.buildMarca(marca);

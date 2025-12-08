@@ -1,7 +1,7 @@
 public class FarolOffCommand implements Command{
   Farol farol;
 
-  public void FarolOffCommand(Farol far){
+  public FarolOffCommand(Farol far){
     farol = far;
   }
   public void execute(){
