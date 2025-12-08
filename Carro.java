@@ -33,25 +33,6 @@ public class Carro{
     System.out.printf("Motor: %b \nBateria: %b \nFarol: %b\n\n", motor.isLigado, bateria.isLigado, farol.isLigado);
   }
   
-  public void ligar(){
-    this.bateria.on();
-    this.motor.on();
-  }
-  
-  public void desligar(){
-    bateria.off();
-    motor.off();
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   //ficaria com muitos parametros
 /*
   Bateria bateria;

@@ -5,7 +5,7 @@ public class LigarCarroCommand implements Command{
     carro = car;
   }
   public void execute(){
-    carro.ligar();
-  
+    carro.bateria.on();
+    carro.motor.on();
   }
 }

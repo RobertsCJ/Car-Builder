@@ -5,7 +5,8 @@ public class DesligarCarroCommand implements Command{
     carro = car;
   }
   public void execute(){
-    carro.desligar();
+    carro.bateria.off();
+    carro.motor.off();
   
   }
 }
