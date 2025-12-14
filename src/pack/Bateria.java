@@ -1,3 +1,5 @@
+package pack;
+
 public class Bateria{
   boolean isLigado;
   String tipo;

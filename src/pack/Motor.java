@@ -1,3 +1,5 @@
+package pack;
+
 public class Motor{
   Tanque tanque;
   int cv;

@@ -1,3 +1,5 @@
+package pack;
+
 class ControleRemoto{
 	Command tipoComando;
 	

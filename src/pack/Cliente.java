@@ -1,3 +1,5 @@
+package pack;
+
 public class Cliente{
 	public static void main(String[] args){
 	  //Carro car = new Carro(new Bateria(), new Motor(), new Tanque(), new Farol()); fica com muitos parametros

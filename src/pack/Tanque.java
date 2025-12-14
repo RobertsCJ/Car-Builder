@@ -1,3 +1,5 @@
+package pack;
+
 public class Tanque{
   int qtd;
   int max;

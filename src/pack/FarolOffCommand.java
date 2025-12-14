@@ -1,3 +1,5 @@
+package pack;
+
 public class FarolOffCommand implements Command{
   Farol farol;
 

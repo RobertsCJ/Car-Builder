@@ -1,3 +1,5 @@
+package pack;
+
 public class Farol{
   boolean isLigado;
   String tipo;
